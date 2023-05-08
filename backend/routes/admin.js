@@ -20,7 +20,7 @@ function(request, response) {
 
         admin.checkRoot(function(dbError, dbResult){
             if(dbError || !(dbResult.length > 0)){
-                console.log("Root Account does not exist");
+                console.log("Default Account does not exist");
                 response.send(false);
             } else {
                 console.log("Success");
