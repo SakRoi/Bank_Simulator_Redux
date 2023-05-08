@@ -15,7 +15,8 @@ const accountsRouter = require('./routes/accounts');
 const historyRouter = require('./routes/history');
 const cardsRouter = require('./routes/cards');
 const ownershipRouter = require('./routes/ownership');
-const loginRouter = require('./routes/login')
+const loginRouter = require('./routes/login');
+const adminRouter = require('./routes/admin');
 
 const app = express();
 
@@ -26,7 +27,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/login', loginRouter); //works as our authetication
+app.use('/login', loginRouter); //works as our user authentication
+app.use('/cerberus', adminRouter); //works as our admin authentication
 app.use(authenticateToken);
 app.use('/cards',cardsRouter);
 app.use('/user', usersRouter);
