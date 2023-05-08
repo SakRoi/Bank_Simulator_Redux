@@ -1,4 +1,6 @@
-Bank Simulator
+# Bank Simulator Redux
+
+This is a personal fork of [Bank Simulator](https://github.com/SakRoi/Bank_Simulator) meant to flesh out the project, see [the roadmap](#roadmap) for more info.
 
 A first-year project for Oulu University of Applied Sciences' ["Software Developement Application Project" -course](https://www.oamk.fi/opinto-opas/en/content-of-studies/curricula?koulutus=tvt2023k-ohj&lk=k2023&alasivu=opintojakso&kieli=en&oj=IN00CS90_en). By [Santtu Niskanen](https://github.com/santtuniskanen), [Saku Roininen](https://github.com/SakRoi), [Joonas Ridanpää](https://github.com/JnsRdnp), and [Lauri Tuovinen](https://github.com/LauriTuovinen).
 
@@ -62,19 +64,27 @@ Bank Simulator also has some basic security features such as JSON Web Token for 
 19. Your card is now able to be used to login into the bank simulator. Uncomment the line 30 in app.js and restart the server.
 Congrats, the program should now be able to work without many changes to the backend itself. You can add new cards by doing the same thing but without the need of creating the whole system again. You can also add multiple accounts to one card if you so wish to.
 
-#### 
+### Usage
 
-## Usage
 Usage of the Bank Simulator is simple. You can log in into the bank simulator by giving it a card using an RFID reader and giving it's PIN. If the card is both credit and debit, it will ask the user to choose one of them. If the card has multiple accounts attached to it, it will ask the user which it wants to use.
 
 In the "main menu", the user can choose to see their balance (saldo), withdraw money (nosto), see history (tili), or sign out (kirjaudu ulos). The main menu also asks the user automatically after 20 seconds of not interfacing with the program, if they want to continue their session. This also automatically sign outs the user after 10 seconds of not choosing.
 
-## [A short video to show the usage.](https://youtu.be/piatJRwadu4)
+#### **[A short video to show the usage.](https://youtu.be/piatJRwadu4)**
+
+## Roadmap
+
+This roadmap includes all big changes I will be doing to this project on my own free time to flesh it out:
+* Refactor the backend to have both admin and user authentication
+* Change the MySQL database to support admin users
+* Create an user interface for admins to edit users
+    * create different permissions for the admins (root admin can edit other admins and users, admins can only edit users)
+* Change end user part of the frontend to have a single config file for easier setting up
+* Make an installer for the QT parts of the project
 
 ## Known Issues
 
 * The addition of new info is unsafe and should be probably done via a different software made for it.
-
 * The software's installation is cumbersome and would be helped by an installer for the QT fronted.
 
 ## License
@@ -95,5 +105,3 @@ General QT problems
 - https://forum.qt.io/
 - https://doc.qt.io/
 - https://www.qtcentre.org/
-
-
