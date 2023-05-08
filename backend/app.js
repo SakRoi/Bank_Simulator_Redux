@@ -27,8 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/login', loginRouter); //works as our authetication
-app.use('/cards',cardsRouter);
 app.use(authenticateToken);
+app.use('/cards',cardsRouter);
 app.use('/user', usersRouter);
 app.use('/accounts',accountsRouter);
 app.use('/history',historyRouter);
