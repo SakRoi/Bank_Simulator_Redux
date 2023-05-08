@@ -76,7 +76,7 @@ In the "main menu", the user can choose to see their balance (saldo), withdraw m
 
 This roadmap includes all big changes I will be doing to this project on my own free time to flesh it out:
 * Refactor the backend to have both admin and user authentication
-* Change the MySQL database to support admin users
+* Change the MySQL database to support admin users [x]
 * Create an user interface for admins to edit users
     * create different permissions for the admins (root admin can edit other admins and users, admins can only edit users)
 * Change end user part of the frontend to have a single config file for easier setting up
