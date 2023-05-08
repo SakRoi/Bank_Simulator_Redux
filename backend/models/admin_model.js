@@ -6,7 +6,7 @@ const admin = {
     },
 
     checkRoot: function(callback) {
-        return db.query("select * from administrators where userName = root", callback);
+        return db.query('select * from administrators where userName = "root"', callback);
     }
 }
 
