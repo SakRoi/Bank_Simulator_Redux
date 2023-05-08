@@ -16,7 +16,7 @@ const historyRouter = require('./routes/history');
 const cardsRouter = require('./routes/cards');
 const ownershipRouter = require('./routes/ownership');
 const loginRouter = require('./routes/login');
-const adminRouter = require('./routes/admin');
+const adminRouter = require('./routes/admin_login');
 
 const app = express();
 

@@ -3,7 +3,7 @@ const router = express.Router();
 const jtw = require('jsonwebtoken');
 const dotenv = require('dotenv');
 const bcrypt = require('bcryptjs');
-const admin = require("../models/admin_model");
+const admin = require("../models/admin_login_model");
 
 //Original source: https://peatutor.com/express/Examples/webtoken.php, refactored by Saku Roininen
 router.post('/',
