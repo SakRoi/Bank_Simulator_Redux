@@ -28,7 +28,7 @@ function(request, response) {
                         response.send(false);
                     } else {
                     console.log("success");
-                    const token = generateAccessToken({ cardID: user });
+                    const token = generateAccessToken({ cardID: user, role: 0101 });
                     response.send(token);
                     }		
                 });
@@ -37,9 +37,9 @@ function(request, response) {
     }
 });
 
-function generateAccessToken(id) {
+function generateAccessToken(info) {
     dotenv.config();
-    return jtw.sign(id, process.env.MY_TOKEN, { expiresIn: '200s'});
+    return jtw.sign(info, process.env.MY_TOKEN, { expiresIn: '200s'});
 }
 
 module.exports = router;
